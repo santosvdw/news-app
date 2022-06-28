@@ -1,18 +1,18 @@
 {
-    "name": "name",
+    "name": "news-app",
     "version": "0.1.0",
-    "description": "description",
+    "description": "news app built with the New York Times API",
     "main": "public/index.html",
     "author": "Santos van der Wansem",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/santosvdw/reponame.git"
+        "url": "git+https://github.com/santosvdw/news-app.git"
     },
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/santosvdw/reponame/issues"
+        "url": "https://github.com/santosvdw/news-app/issues"
     },
-    "homepage": "https://github.com/santosvdw/reponame#readme",
+    "homepage": "https://github.com/santosvdw/news-app#readme",
     "scripts": {
         "build:sass": "sass  --no-source-map src/sass:public/css",
         "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
