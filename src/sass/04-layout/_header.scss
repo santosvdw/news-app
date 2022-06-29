@@ -1,0 +1,10 @@
+@use '../01-usables/' as *;
+
+header {
+    display: block;
+    // background-color: rgba(0, 255, 255, 0.24);
+    h1 {
+        font-size: 10rem;
+        margin-left: 18vw;
+    }
+}

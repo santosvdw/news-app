@@ -1,3 +1,15 @@
-body {
-    background-color: azure;
-}
+@use './01-usables/breakpoints' as *;
+@use './01-usables/' as *;
+
+@use './02-basics/reset' as *;
+@use './02-basics/typography' as *;
+
+@use './03-components/icons' as *;
+@use './03-components/news-card' as *;
+@use './03-components/scroll-bar' as *;
+
+@use './04-layout/container' as *;
+@use './04-layout/footer' as *;
+@use './04-layout/header' as *;
+@use './04-layout/home' as *;
+@use './04-layout/nav-bar' as *;

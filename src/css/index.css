@@ -1,0 +1,145 @@
+body {
+  background-color: hsl(60deg, 100%, 55%);
+  width: 100vw;
+  margin-left: 0;
+  top: 0;
+  overflow-x: hidden;
+}
+
+script {
+  display: none;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: hsl(238deg, 35%, 19%);
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 5.653rem;
+}
+
+h2 {
+  font-size: 3.998rem;
+}
+
+h3 {
+  font-size: 2.827rem;
+}
+
+h4 {
+  font-size: 1.999rem;
+}
+
+h5 {
+  font-size: 1.414rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+.menu-svg svg {
+  height: 12px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(238deg, 35%, 19%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(71deg, 86%, 49%);
+}
+
+header {
+  display: block;
+}
+header h1 {
+  font-size: 10rem;
+  margin-left: 18vw;
+}
+
+nav {
+  all: unset;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+nav .navbar {
+  background-color: rgba(255, 0, 242, 0.247);
+  width: 100vw;
+  height: 60px;
+  align-items: center;
+  display: flex;
+}
+nav .navbar .menu__phone {
+  display: none;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  right: 20vw;
+  position: absolute;
+  background-color: rgba(0, 136, 255, 0.281);
+}
+nav .navbar .menu__phone #menu_svg {
+  height: 30px;
+  width: 30px;
+  padding-left: 15px;
+}
+nav .navbar .menu__main {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  right: 20vw;
+  position: absolute;
+  background-color: rgba(0, 136, 255, 0.281);
+}
+nav .navbar .menu__main ul.list__nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 15px;
+  flex: 1;
+  padding-left: 0;
+}
+nav .navbar .menu__main ul.list__nav li, nav .navbar .menu__main ul.list__nav li::before {
+  display: flex;
+  align-items: center;
+}
+nav .navbar .menu__main ul.list__nav li:nth-of-type(1):before {
+  content: url("../assets/house-door-fill.svg");
+}
+nav .navbar .menu__main ul.list__nav li:nth-of-type(2):before {
+  content: url("../assets/book-fill.svg");
+}
+nav .navbar .menu__main ul.list__nav li:nth-of-type(3):before {
+  content: url("../assets/film.svg");
+}
+nav .navbar .menu__main ul.list__nav li:nth-of-type(4):before {
+  content: url("../assets/newspaper.svg");
+}
