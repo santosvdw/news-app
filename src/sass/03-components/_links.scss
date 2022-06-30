@@ -1,20 +1,2 @@
 @use '../01-usables/' as *;
 
-a {
-    color: $black;
-    text-decoration: none;
-    //     transition: color 0.3s ease-in-out;
-    // &, &>svg {
-    //     transition: color 0.3s ease-in-out;
-    // }
-
-    table:hover {
-        transition: color 0.3s ease-in-out;
-    }
-    &:hover {
-        color: $primary-clr;
-        svg {
-            fill: $primary-clr;
-        }
-    }
-}
