@@ -1,1 +1,40 @@
 @use '../01-usables/' as *;
+
+.article_card {
+    width: 22vw;
+    height: 400px;
+
+    &:nth-last-of-type(even) {
+        background-color: $black;
+        .article_text {
+            h6 {
+                color: $white;
+            }
+        }
+    }
+    &:nth-of-type(odd) {
+        // background-color: $secondary-clr;
+        background-color: aqua;
+        .article_text {
+            h6 {
+                color: $black;
+            }
+        }
+    }
+
+    .article_image {
+        width: 100%;
+        height: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .article_text {
+        width: 100%;
+        height: 50%;
+    }
+}

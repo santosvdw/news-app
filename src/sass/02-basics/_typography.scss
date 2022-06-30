@@ -6,7 +6,7 @@
     // font-size: $primary-font-size;
     // font-weight: $primary-font-weight;
     // line-height: $primary-line-height;
-    color: $contrast-clr;
+    color: $black;
 }
 
 body {
@@ -41,5 +41,6 @@ h5 {
 
 h6 {
     font-size: $s-h6;
+    font-weight: 400;
 }
 

@@ -15,13 +15,17 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
     </head>
     <body>
         <noscript>You can't view this site without JavaScript</noscript>
         <nav>
             <div class="navbar">
-                <div class="menu__phone">
+                <div class="menu__main">
                     <p>Menu</p>
                     <span id="menu_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
@@ -30,25 +34,125 @@
                             /></svg
                     ></span>
                 </div>
-                <div class="menu__main">
+                <!-- <div class="menu__main">
                     <ul class="list__nav">
-                        <li>Home</li>
-                        <li>Books</li>
-                        <li>Movies</li>
-                        <li>Archive</li>
+                        <li>
+                            <a href="#">
+                                <table>
+                                    <td class="nav__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1f2141" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+                                            />
+                                        </svg>
+                                    </td>
+                                    <td class="nav__label">Home</td>
+                                </table>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <table>
+                                    <td class="nav__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1f2141" class="bi bi-book-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"
+                                            />
+                                        </svg>
+                                    </td>
+                                    <td class="nav__label">Books</td>
+                                </table>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <table>
+                                    <td class="nav__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1f2141" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+                                            <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            <path
+                                                d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"
+                                            />
+                                        </svg>
+                                    </td>
+                                    <td class="nav__label">Movie reviews</td>
+                                </table>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <table>
+                                    <td class="nav__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1f2141" class="bi bi-archive-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"
+                                            />
+                                        </svg>
+                                    </td>
+                                    <td class="nav__label">Archive</td>
+                                </table>
+                            </a>
+                        </li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Archive</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </nav>
         <header>
             <h1>News</h1>
+            <blockquote>Today's headlines:</blockquote>
+            <!-- <div class="header__blob">
+                <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <g transform="translate(456.9722828861568 317.5897443238714)">
+                        <path
+                            d="M101.8 -142.2C140.1 -133.7 185.1 -119.4 217.9 -87.7C250.8 -56.1 271.4 -7 258.6 32.6C245.8 72.3 199.6 102.6 160.1 126.6C120.5 150.7 87.6 168.4 55 170.2C22.3 172.1 -10 158 -56.7 159.6C-103.5 161.2 -164.7 178.5 -207.2 161.6C-249.6 144.8 -273.3 93.7 -276.1 42.6C-278.9 -8.5 -260.9 -59.7 -237.1 -106.8C-213.3 -153.9 -183.7 -196.8 -143.2 -204.3C-102.7 -211.8 -51.4 -183.9 -9.8 -168.6C31.7 -153.4 63.4 -150.7 101.8 -142.2"
+                            fill="#FF7F11"
+                        ></path>
+                    </g>
+                </svg>
+            </div> -->
         </header>
         <div class="container">
             <main class="home">
-                <div class="news_row" id="row_1">Okay</div>
-                <div class="news_row" id="row_2"></div>
+                <div class="articles">
+                    <div class="article_card">
+                        <div class="article_image" id="div_img_01">
+                            <img alt="" id="article_image_01" />
+                        </div>
+                        <div class="article_text" id="div_text_01">
+                            <span class="article_title" id="article_title_01"></span>
+                            <span class="article_metadata" id="article_metadata_01"></span>
+                            <span class="article_description" id="article_description_01"></span>
+                        </div>
+                    </div>
+                    <div class="article_card">
+                        <div class="article_image" id="div_img_02">
+                            <img alt="" id="article_image_02" />
+                        </div>
+                        <div class="article_text" id="div_text_02">
+                            <span class="article_title" id="article_title_02"></span>
+                            <span class="article_metadata" id="article_metadata_02"></span>
+                            <span class="article_description" id="article_description_02"></span>
+                        </div>
+                    </div>
+                    <div class="article_card">
+                        <div class="article_image" id="div_img_03">
+                            <img alt="" id="article_image_03" />
+                        </div>
+                        <div class="article_text" id="div_text_03">
+                            <span class="article_title" id="article_title_03"></span>
+                            <span class="article_metadata" id="article_metadata_03"></span>
+                            <span class="article_description" id="article_description_03"></span>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
+        <div class="white__background"></div>
         <!-- container -->
     </body>
 </html>

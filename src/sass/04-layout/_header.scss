@@ -1,10 +1,35 @@
 @use '../01-usables/' as *;
 
 header {
-    display: block;
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-flow: column wrap;
     // background-color: rgba(0, 255, 255, 0.24);
     h1 {
+        margin: 0;
+        margin-left: calc(15vw - 10px);
         font-size: 10rem;
-        margin-left: 18vw;
+        font-weight: 900;
+        line-height: calc($heading-line-height * 0.75);
     }
+    blockquote {
+        font-style: italic;
+        margin: 0;
+        margin-left: 15vw;
+        font-weight: 600;
+    }
+
+    // div.header__blob {
+    //     svg {
+    //         path {
+    //             fill: #803c00;
+    //         }
+    //         position: absolute;
+    //         top: -38vh;
+    //         left: -3vw;
+    //         transform: rotate(-20deg);
+    //         z-index: -10;
+    //     }
+    // }
 }

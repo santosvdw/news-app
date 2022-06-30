@@ -3,21 +3,21 @@
 // Scrollbar
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f100;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f100;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $contrast-clr;
-    border-radius: 10px;
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: $contrast-clr;
+//     border-radius: 10px;
+// }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: $secondary-clr
-}
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: $secondary-clr
+// }

@@ -22,10 +22,32 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3Ne3OobjMQy6
     })
     .then(function (jsonData) {
         console.log(jsonData);
+
+        // Article cards
+        let articleCard = '';
+        let articleCardData = '';
+        for (let i = 1; i < 4; i++) {
+            articleCard = {
+                image: document.querySelector(`#article_image_0${i}`),
+                metadata: document.querySelector(`#article_metadata_0${i}`),
+                title: document.querySelector(`#article_title_0${i}`),
+            };
+            articleCardData = {
+                image: jsonData.results[i].multimedia[0].url,
+                title: jsonData.results[i].title,
+                description: jsonData.results[i].abstract,
+                date: jsonData.results[i].published_date.substring(0, 10),
+                url: jsonData.results[i].url,
+            };
+            // Image
+            articleCard.image.src = articleCardData.image;
+            articleCard.image.alt = articleCardData.title;
+            // Title
+            articleCard.title.innerHTML = `<h6>${articleCardData.title}</h6>`;
+            // Description
+        }
     })
     .catch((error) => {
         return error;
         // handle the error
     });
-
-console.log(mostViewedResponse.results);

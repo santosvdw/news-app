@@ -1,12 +1,13 @@
 // COLORS
-$primary-clr: hsl(60, 100%, 55%);
-$secondary-clr: hsl(71, 86%, 49%);
-$contrast-clr: hsl(238, 35%, 19%);
+$primary-clr: hsl(54, 100%, 55%);
+$secondary-clr: #FF7F11;
+$contrast-clr-dark: hsl(234, 95%, 23%);
+$black: hsl(0, 0%, 7%);
 $white: hsl(0, 9%, 98%);
 
 // FONTS
 $body-font: 'Montserrat', sans-serif;
-$heading-font: 'Rubik', sans-serif;
+$heading-font: 'Raleway', sans-serif;
 
 // FONT-SIZES
 $s-h1: 5.653rem;
@@ -14,7 +15,7 @@ $s-h2: 3.998rem;
 $s-h3: 2.827rem;
 $s-h4: 1.999rem;
 $s-h5: 1.414rem;
-$s-h6: 1.2rem;
+$s-h6: 1.05rem;
 $s-p: 1rem;
 $heading-line-height: 1.2;
 

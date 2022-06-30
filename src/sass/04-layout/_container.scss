@@ -1,1 +1,9 @@
 @use '../01-usables/' as *;
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+    top: 55vh;
+    position: absolute;
+    z-index: 10;
+}
