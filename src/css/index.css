@@ -1,3 +1,11 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
 body {
   background-color: hsl(54deg, 100%, 55%);
   width: 100vw;
@@ -52,6 +60,67 @@ h6 {
 
 .menu-svg svg {
   height: 12px;
+}
+
+#ham_menu {
+  display: none;
+}
+
+#ham_menu.is-active {
+  position: fixed;
+  z-index: 100;
+  min-width: 26vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(105, 105, 105, 0.37);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(35px);
+}
+#ham_menu.is-active::before {
+  width: 74vw;
+  height: 100vh;
+  position: absolute;
+  content: "";
+  background-color: rgb(46, 139, 86);
+  transform: translateX(-100%);
+  pointer-events: none;
+  z-index: inherit;
+  cursor: pointer;
+}
+#ham_menu.is-active #close_menu {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(46, 139, 86);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: none;
+}
+#ham_menu.is-active ul {
+  list-style: none;
+}
+#ham_menu.is-active ul li {
+  padding: 10px;
+}
+#ham_menu.is-active ul li a {
+  color: hsl(0deg, 0%, 7%);
+  text-decoration: none;
+}
+#ham_menu.is-active ul li a svg {
+  position: relative;
+  top: 3px;
+  padding-left: 4%;
+}
+#ham_menu.is-active ul li a span:hover {
+  fill: #FF7F11;
+  color: #FF7F11;
 }
 
 .article_card {
@@ -193,8 +262,23 @@ header blockquote {
   margin: 0;
   margin-left: 15vw;
   font-weight: 600;
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 nav {
   all: unset;
   position: absolute;
@@ -261,16 +345,22 @@ nav .navbar {
                 content: url('../assets/archive-fill.svg');
             }*/
 }
-nav .navbar .menu__main {
+nav .navbar #menu_main {
   display: flex;
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
   right: 20vw;
   position: absolute;
+  cursor: pointer;
 }
-nav .navbar .menu__main #menu_svg {
+nav .navbar #menu_main p {
+  z-index: 2000;
+  position: relative;
+}
+nav .navbar #menu_main #menu_svg {
   height: 30px;
   width: 30px;
+  position: relative;
   padding-left: 15px;
 }

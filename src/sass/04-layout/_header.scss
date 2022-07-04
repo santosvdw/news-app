@@ -18,6 +18,11 @@ header {
         margin: 0;
         margin-left: 15vw;
         font-weight: 600;
+        width: 22ch;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
     }
 
     // div.header__blob {
@@ -32,4 +37,17 @@ header {
     //         z-index: -10;
     //     }
     // }
+}
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }

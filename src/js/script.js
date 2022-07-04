@@ -45,6 +45,35 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3Ne3OobjMQy6
                 geo: jsonData.results[i].geo_facet,
                 des: jsonData.results[i].des_facet,
             };
+
+            if (articleCardData.title == false) {
+                console.log('no title');
+                articleCardData = {
+                    image: jsonData.results[i + i].multimedia[0].url,
+                    title: jsonData.results[i + i].title,
+                    description: jsonData.results[i + i].abstract,
+                    date: jsonData.results[i + i].updated_date.substring(5, 10),
+                    url: jsonData.results[i + i].url,
+                    byline: jsonData.results[i + i].byline,
+                    geo: jsonData.results[i + i].geo_facet,
+                    des: jsonData.results[i + i].des_facet,
+                };
+
+                if (articleCardData.title == false) {
+                    console.log('no title');
+                    articleCardData = {
+                        image: jsonData.results[i + i + i].multimedia[0].url,
+                        title: jsonData.results[i + i + i].title,
+                        description: jsonData.results[i + i + i].abstract,
+                        date: jsonData.results[i + i + i].updated_date.substring(5, 10),
+                        url: jsonData.results[i + i + i].url,
+                        byline: jsonData.results[i + i + i].byline,
+                        geo: jsonData.results[i + i + i].geo_facet,
+                        des: jsonData.results[i + i + i].des_facet,
+                    };
+                }
+            }
+
             // Image
             articleCard.image.src = articleCardData.image;
             articleCard.image.alt = articleCardData.title;
@@ -68,3 +97,16 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3Ne3OobjMQy6
         return error;
         // handle the error
     });
+
+const hamburgerMenu = document.querySelector('#ham_menu');
+let classToggle = () => {
+    hamburgerMenu.classList.remove('is-inactive');
+    hamburgerMenu.classList.toggle('is-active');
+    console.log('clicked');
+};
+
+const menuToggle = document.querySelector('#menu_main');
+menuToggle.addEventListener('click', classToggle);
+
+const menuCloseToggle = document.querySelector('#close_menu');
+menuCloseToggle.addEventListener('click', classToggle);

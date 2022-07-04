@@ -1,5 +1,13 @@
 @use '../01-usables/' as *;
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
 body {
     background-color: $primary-clr;
     width: 100vw;

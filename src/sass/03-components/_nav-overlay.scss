@@ -1,0 +1,67 @@
+@use '../01-usables/' as *;
+
+#ham_menu {
+    display: none;
+}
+
+#ham_menu.is-active{
+    position: fixed;
+    z-index: 100;
+    min-width: 26vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(105, 105, 105, 0.37);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(35px);
+
+    &::before {
+        width: 74vw;
+        height: 100vh;
+        position: absolute;
+        content: '';
+        background-color: rgb(46, 139, 86);
+        transform: translateX(-100%);
+        pointer-events: none;
+        z-index: inherit;
+        cursor: pointer;
+    } 
+
+    #close_menu {
+        position: relative;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(46, 139, 86);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        // z-index: 300;
+        pointer-events: none;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            padding: 10px;
+            a {
+                color: $black;
+                text-decoration: none;
+
+                svg {
+                    position: relative;
+                    top: 3px;
+                    padding-left: 4%;
+                }
+                span:hover{
+                    fill: $secondary-clr;
+                    color: $secondary-clr;
+                }
+        }
+    }
+}}
+
