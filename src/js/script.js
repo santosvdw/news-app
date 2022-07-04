@@ -101,11 +101,11 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3Ne3OobjMQy6
 const hamburgerMenu = document.querySelector('#ham_menu');
 let menuActive = 'false';
 
-let classToggle = () => {
-    hamburgerMenu.classList.toggle('is-active');
-    menuTextToggle();
-    slay();
-};
+// let classToggle = () => {
+//     hamburgerMenu.classList.toggle('is-active');
+//     menuTextToggle();
+//     slay();
+// };
 
 const menuToggle = document.querySelector('#menu_main');
 menuToggle.addEventListener('click', classToggle);
