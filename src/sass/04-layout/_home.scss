@@ -1,1 +1,6 @@
 @use '../01-usables/' as *;
+
+main.home {
+    display: flex;
+    flex-flow: column wrap;
+}

@@ -139,6 +139,9 @@ h6 {
 .article_card:nth-last-of-type(even) .article_description p {
   color: hsl(0deg, 9%, 98%);
 }
+.article_card:nth-of-type(odd) {
+  background-color: hsl(0deg, 9%, 98%);
+}
 .article_card:nth-of-type(odd) .article_text h6 {
   color: hsl(0deg, 0%, 7%);
 }
@@ -282,6 +285,11 @@ header blockquote {
     border-color: transparent;
   }
 }
+main.home {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 nav {
   all: unset;
   position: absolute;
@@ -366,4 +374,8 @@ nav .navbar #menu_main #menu_svg {
   width: 30px;
   position: relative;
   padding-left: 15px;
+}
+
+section.stories {
+  display: block;
 }
