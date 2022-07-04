@@ -66,30 +66,7 @@ h6 {
   display: none;
 }
 
-#ham_menu.is-active {
-  position: fixed;
-  z-index: 100;
-  min-width: 26vw;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  background-color: rgba(105, 105, 105, 0.37);
-  display: flex;
-  align-items: center;
-  backdrop-filter: blur(35px);
-}
-#ham_menu.is-active::before {
-  width: 74vw;
-  height: 100vh;
-  position: absolute;
-  content: "";
-  background-color: rgb(46, 139, 86);
-  transform: translateX(-100%);
-  pointer-events: none;
-  z-index: inherit;
-  cursor: pointer;
-}
-#ham_menu.is-active #close_menu {
+#close_menu {
   position: relative;
   top: 10px;
   right: 10px;
@@ -101,10 +78,36 @@ h6 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 3000;
   pointer-events: none;
+}
+
+#ham_menu.is-active {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(105, 105, 105, 0.37);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(35px);
+}
+#ham_menu.is-active .ham_overlay {
+  height: 100vh;
+  width: inherit;
+}
+#ham_menu.is-active .ham_content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #ham_menu.is-active ul {
   list-style: none;
+  transform: scale(1.5);
 }
 #ham_menu.is-active ul li {
   padding: 10px;
@@ -116,7 +119,7 @@ h6 {
 #ham_menu.is-active ul li a svg {
   position: relative;
   top: 3px;
-  padding-left: 4%;
+  left: 10px;
 }
 #ham_menu.is-active ul li a span:hover {
   fill: #FF7F11;
@@ -179,7 +182,7 @@ h6 {
   width: 20.9vw;
   display: block;
   position: absolute;
-  top: 343.2px;
+  top: 333.2px;
   z-index: 15;
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, hsl(0deg, 9%, 98%) 70%);
@@ -192,7 +195,7 @@ h6 {
   width: 90%;
   height: 3.6em;
   overflow: hidden;
-  top: 75%;
+  top: 72.5%;
   position: absolute;
   width: 17.6vw;
 }

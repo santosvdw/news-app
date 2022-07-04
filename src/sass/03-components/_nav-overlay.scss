@@ -3,11 +3,26 @@
 #ham_menu {
     display: none;
 }
+#close_menu {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(46, 139, 86);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3000;
+    pointer-events: none;
+}
 
 #ham_menu.is-active{
     position: fixed;
     z-index: 100;
-    min-width: 26vw;
+    width: 100vw;
     height: 100vh;
     top: 0;
     right: 0;
@@ -16,36 +31,38 @@
     align-items: center;
     backdrop-filter: blur(35px);
 
-    &::before {
-        width: 74vw;
-        height: 100vh;
-        position: absolute;
-        content: '';
-        background-color: rgb(46, 139, 86);
-        transform: translateX(-100%);
-        pointer-events: none;
-        z-index: inherit;
-        cursor: pointer;
-    } 
+    // &::before {
+    //     width: 74vw;
+    //     height: 100vh;
+    //     position: absolute;
+    //     content: '';
+    //     background-color: rgb(46, 139, 86);
+    //     transform: translateX(-100%);
+    //     pointer-events: none;
+    //     z-index: inherit;
+    //     cursor: pointer;
+    // } 
 
-    #close_menu {
-        position: relative;
-        top: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        background-color: rgb(46, 139, 86);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        // z-index: 300;
-        pointer-events: none;
+
+
+
+    .ham_overlay {
+       height: 100vh;
+       width: inherit;
+    //    background-color: rgba(46, 139, 86, 0.219);
+}
+
+.ham_content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 
     ul {
         list-style: none;
+        transform: scale(1.5);
         li {
             padding: 10px;
             a {
@@ -55,7 +72,8 @@
                 svg {
                     position: relative;
                     top: 3px;
-                    padding-left: 4%;
+                    left: 10px;
+                    // padding-left: 4%;
                 }
                 span:hover{
                     fill: $secondary-clr;

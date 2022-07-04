@@ -99,14 +99,27 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=3Ne3OobjMQy6
     });
 
 const hamburgerMenu = document.querySelector('#ham_menu');
+let menuActive = 'false';
+
 let classToggle = () => {
-    hamburgerMenu.classList.remove('is-inactive');
     hamburgerMenu.classList.toggle('is-active');
-    console.log('clicked');
+    menuTextToggle();
+    slay();
 };
 
 const menuToggle = document.querySelector('#menu_main');
 menuToggle.addEventListener('click', classToggle);
 
-const menuCloseToggle = document.querySelector('#close_menu');
-menuCloseToggle.addEventListener('click', classToggle);
+const menuText = document.querySelector('#menu_text_content');
+const htmlEl = document.querySelector('html');
+let menuTextToggle = () => {
+    if ((hamburgerMenu.class = 'is-active')) {
+        menuText.innerHTML = `<p position='fixed'>Close</p>`;
+        htmlEl.style.overflow = 'hidden';
+        htmlEl.style.height = '100%';
+    } else if ((hamburgerMenu.class = 'is-active') == false) {
+        menuText.innerHTML = `<p>Menu</p>`;
+        htmlEl.style.overflow = 'scroll';
+        htmlEl.style.height = '';
+    }
+};

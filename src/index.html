@@ -27,7 +27,7 @@
             <div class="navbar">
                 <div class="date"></div>
                 <div id="menu_main">
-                    <p>Menu</p>
+                    <p id="menu_text_content">Menu</p>
                     <span id="menu_svg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
                             <path
@@ -36,55 +36,57 @@
                     ></span>
                 </div>
             </div>
-            <div id="ham_menu" class="is-inactive">
-                <div id="close_menu"><img src="./assets/x-lg (1).svg" alt="X" /></div>
+            <div id="ham_menu">
                 <div class="ham_overlay">
-                    <ul class="ham_list">
-                        <li>
-                            <a href="#"
-                                ><span
-                                    >News
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                        /></svg></span
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                ><span
-                                    >Books
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                        /></svg></span
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                ><span
-                                    >Movies
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                        /></svg></span
-                            ></a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                ><span
-                                    >Archive
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                        /></svg></span
-                            ></a>
-                        </li>
-                    </ul>
+                    <div class="ham_content">
+                        <!-- <div id="close_menu"><img src="./assets/x-lg (1).svg" alt="X" />X</div> -->
+                        <ul class="ham_list">
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >News
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                            /></svg></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Books
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                            /></svg></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Movies
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                            /></svg></span
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><span
+                                        >Archive
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                            /></svg></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
